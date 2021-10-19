@@ -1,5 +1,4 @@
---WarMenu version 0.9.7
--- print('WARMENU - START')
+-- WarMenu version 0.9.7
 WarMenu = { }
 
 -- Options
