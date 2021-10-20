@@ -6,6 +6,7 @@ FiveM spectate system based by Menu
 ```
 ensure xSpectate
 add_ace group.admin xspectate.main allow
+add_ace group.admin xspectate.menu allow
 add_principal identifier.fivem:1 group.admin
 ```
 3. Restart server and enjoy
@@ -17,4 +18,5 @@ local open_menu_key = 288
 # Permissions
 ```
 add_ace group.admin xspectate.main allow
+add_ace group.admin xspectate.menu allow
 ```
