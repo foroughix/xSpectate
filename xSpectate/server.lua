@@ -1,7 +1,7 @@
 -- menu
 RegisterServerEvent('xSpectateMenu')
 AddEventHandler('xSpectateMenu', function()
-	if IsPlayerAceAllowed(source,'xspectate.main') then
+	if IsPlayerAceAllowed(source,'xspectate.menu') then
 		local nplayers = 0
 		local player_ids = {}
 		local player_names = {}
