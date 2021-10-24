@@ -5,7 +5,7 @@ local nplayers = 0
 local player_ids = {}
 local player_names = {}
 Citizen.CreateThread(function()
-	CreateWarMenu('xspectate', 'xSpectate', 'xSpectate Menu', {0.7, 0.2}, 1.0)
+	CreateWarMenu('xspectate', 'xSpectate', 'Spectate Menu', {0.7, 0.2}, 1.0)
 	while true do 
 		Citizen.Wait(0)
 		if IsControlJustReleased(0, open_menu_key) then
