@@ -9,7 +9,11 @@ Citizen.CreateThread(function()
 	while true do 
 		Citizen.Wait(0)
 		if IsControlJustReleased(0, open_menu_key) then
-			TriggerServerEvent('xSpectateMenu')
+			if WarMenu.IsMenuOpened('xspectate') then
+				WarMenu.CloseMenu()
+			else
+				TriggerServerEvent('xSpectateMenu')
+			end
 		end
 		if WarMenu.IsMenuOpened('xspectate') then
 			if WarMenu.Button('~o~Name','~o~ID') then
