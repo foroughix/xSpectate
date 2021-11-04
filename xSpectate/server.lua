@@ -2,10 +2,11 @@
 RegisterServerEvent('xSpectateMenu')
 AddEventHandler('xSpectateMenu', function()
 	if IsPlayerAceAllowed(source,'xspectate.menu') then
+		local players = GetPlayers()
 		local nplayers = 0
 		local player_ids = {}
 		local player_names = {}
-		for _, playerId in ipairs(GetPlayers()) do
+		for _, playerId in ipairs(players) do
 			nplayers = nplayers + 1
 			player_ids[nplayers] = playerId
 			player_names[nplayers] = GetPlayerName(playerId)
