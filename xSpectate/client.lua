@@ -68,6 +68,7 @@ AddEventHandler('xSpectate:main', function(coords, playerId)
 			cdspectate = false
 		else
 			spectate = true
+			foundplayer = false
 			lastcoords = GetEntityCoords(PlayerPedId())
 			SetEntityVisible(PlayerPedId(), false)
 			SetEntityCoords(PlayerPedId(), coords.x, coords.y, coords.z + 10.0)
@@ -76,6 +77,7 @@ AddEventHandler('xSpectate:main', function(coords, playerId)
 			SetEntityCoords(PlayerPedId(), coords.x, coords.y, coords.z - 10.0)
 			for _, i in ipairs(GetActivePlayers()) do
 				if NetworkIsPlayerActive(i) and tonumber(GetPlayerServerId(i)) == tonumber(playerId) then
+					foundplayer = true
 					ped = GetPlayerPed(i)
 					positionped = GetEntityCoords(ped)
 					spectateped = ped
@@ -103,6 +105,14 @@ AddEventHandler('xSpectate:main', function(coords, playerId)
 					end
 					break
 				end
+			end
+			if not foundplayer then
+				FreezeEntityPosition(PlayerPedId(), false)
+				SetEntityCoords(PlayerPedId(), lastcoords)
+				SetEntityVisible(PlayerPedId(), true)
+				lastcoords = nil
+				spectate = false
+				cdspectate = false
 			end
 		end
 	end
