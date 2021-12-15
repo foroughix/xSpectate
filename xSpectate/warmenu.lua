@@ -142,7 +142,7 @@ function WarMenu.CreateMenu(id, title)
     menus[id].menuFocusBackgroundColor = { r = 245, g = 245, b = 245, a = 255 }
     menus[id].menuBackgroundColor = { r = 0, g = 0, b = 0, a = 160 }
     menus[id].subTitleBackgroundColor = { r = menus[id].menuBackgroundColor.r, g = menus[id].menuBackgroundColor.g, b = menus[id].menuBackgroundColor.b, a = 255 }
-    menus[id].buttonPressedSound = { name = "SELECT", set = "HUD_FRONTEND_DEFAULT_SOUNDSET" } --https://pastebin.com/0neZdsZ5
+    menus[id].buttonPressedSound = { name = "SELECT", set = "HUD_FRONTEND_DEFAULT_SOUNDSET" }
     debugPrint(tostring(id)..' menu created')
 end
 function WarMenu.CreateSubMenu(id, parent, subTitle)
