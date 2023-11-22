@@ -1,7 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'foroughinia18#1533'
 description 'xSpectate - FiveM spectate system based by Menu'
 version '1.0'
 
